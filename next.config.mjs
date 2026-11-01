@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Self-contained server output for Azure App Service / containers.
+  output: "standalone",
   // Bills can be a few MB; allow generous server action / route body sizes.
   experimental: {
     serverActions: {
