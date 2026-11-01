@@ -3,7 +3,8 @@ import { auth } from "@/auth";
 import { analyzeBill, CATEGORIES, type Category } from "@/lib/anthropic";
 
 export const runtime = "nodejs";
-export const maxDuration = 120;
+// 60s is the max on Vercel's Hobby (free) plan; raise on Pro if needed.
+export const maxDuration = 60;
 
 const ACCEPTED = new Set([
   "application/pdf",
